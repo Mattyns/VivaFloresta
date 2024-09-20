@@ -5,10 +5,19 @@ let currentIndex = 0;
 function showImage(index) {
   const track = document.querySelector('.slider-track');
   const totalImages = images.length;
-  
+
   // Calcular a porcentagem para deslizar
   const percentage = -(100 / totalImages) * index;
   track.style.transform = `translateX(${percentage}%)`;
+
+  // Adicionar a classe "active" à imagem atual e remover das outras
+  images.forEach((img, i) => {
+    if (i === index) {
+      img.classList.add('active');
+    } else {
+      img.classList.remove('active');
+    }
+  });
 }
 
 // Variáveis para armazenar as coordenadas de toque
@@ -37,3 +46,6 @@ slider.addEventListener('touchend', () => {
   }
   showImage(currentIndex);
 });
+
+// Mostrar a primeira imagem ao carregar a página
+showImage(currentIndex);

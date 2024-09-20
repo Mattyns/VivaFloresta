@@ -25,21 +25,30 @@ section#imagens {
 
 .slider-container {
     width: 100%;
-    overflow: hidden; /* Oculta o excesso de imagens fora da tela */
+    overflow: hidden; /* Oculta imagens fora do contêiner visível */
     position: relative;
   }
   
   .slider-track {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Transição suave de deslizamento */
-    width: 300%; /* Para garantir que todas as imagens caibam lado a lado */
+    width: 300%; /* Assegura que todas as imagens caibam lado a lado */
+  }
+  
+  .slider-image {
+    width: 100%;
+    flex-shrink: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transição suave para opacidade e deslizamento */
+    opacity: 0.5; /* Imagens inicialmente "apagadas" */
+  }
+  
+  .slider-image.active {
+    opacity: 1; /* Imagem principal fica em evidência */
+    transform: scale(1.05); /* Um pequeno zoom na imagem principal, se desejado */
   }
 
   .slider-track > img {
     width: 380px;
   }
   
-  .slider-image {
-    width: 100%; /* As imagens ocupam toda a largura do contêiner */
-    flex-shrink: 0; /* Impede que as imagens encolham */
-  }
+  
