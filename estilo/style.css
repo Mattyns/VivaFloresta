@@ -24,6 +24,7 @@ section#imagens {
 }
 
 #image-slider{
+    display: flex;
     text-align: center;
     transition: transform 1s ease-in-out;
 }
@@ -34,6 +35,7 @@ section#imagens {
     height: 300px;
     position: relative;
     margin: auto;
+    flex-shrink: 0;
     
 }
 
