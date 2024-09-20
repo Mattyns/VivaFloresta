@@ -28,7 +28,7 @@ section#imagens {
 }
 
 .slider-image {
-    transition: 1s;
+    transition: transform 1s ease-in-out;
     width: 90%;
     height: 300px;
     position: relative;
