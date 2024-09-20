@@ -7,7 +7,7 @@ function showImage(index) {
   const totalImages = images.length;
 
   // Calcular a porcentagem para deslizar
-  const percentage = -(110 / totalImages) * index;
+  const percentage = -(100 / totalImages) * index;
   track.style.transform = `translateX(${percentage}%)`;
 
   // Adicionar a classe "active" à imagem atual e remover das outras
