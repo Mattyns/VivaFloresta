@@ -1,12 +1,14 @@
-// Seletor das imagens
 const images = document.querySelectorAll('.slider-image');
 let currentIndex = 0;
 
 // Função para mostrar a imagem atual
 function showImage(index) {
-  images.forEach((img, i) => {
-    img.style.display = i === index ? 'block' : 'none';
-  });
+  const track = document.querySelector('.slider-track');
+  const totalImages = images.length;
+  
+  // Calcular a porcentagem para deslizar
+  const percentage = -(100 / totalImages) * index;
+  track.style.transform = `translateX(${percentage}%)`;
 }
 
 // Variáveis para armazenar as coordenadas de toque
@@ -35,7 +37,3 @@ slider.addEventListener('touchend', () => {
   }
   showImage(currentIndex);
 });
-
-
-
-
