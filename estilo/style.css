@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+#topo {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+
+}
+
+#topo i {
+    font-size: 2em;
+    margin-top: 15px;
+    color: black;
+    
+}
+
+#topo > img {
+    
+    width: 250px;
+}
+
+section#imagens {
+    margin-top: 20px;
+}
+
+#image-slider{
+    text-align: center;
+}
+
+.slider-image {
+    
+    width: 90%;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    
+}
+
