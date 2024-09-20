@@ -25,10 +25,12 @@ section#imagens {
 
 #image-slider{
     text-align: center;
+    transition: transform 1s ease-in-out;
 }
 
 .slider-image {
-    transition: transform 1s ease-in-out;
+    
+    
     width: 90%;
     height: 300px;
     position: relative;

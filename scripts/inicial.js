@@ -39,11 +39,3 @@ slider.addEventListener('touchend', () => {
 
 
 
-const slideTrack = document.querySelector('.slide-track');
-const images = document.querySelectorAll('.slide-track img');
-let currentIndex = 0;
-
-function slideImages() {
-  currentIndex = (currentIndex + 1) % images.length;
-  slideTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
