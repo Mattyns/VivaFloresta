@@ -34,6 +34,10 @@ section#imagens {
     transition: transform 0.5s ease-in-out; /* Transição suave de deslizamento */
     width: 300%; /* Para garantir que todas as imagens caibam lado a lado */
   }
+
+  .slider-track > img {
+    width: 380px;
+  }
   
   .slider-image {
     width: 100%; /* As imagens ocupam toda a largura do contêiner */
