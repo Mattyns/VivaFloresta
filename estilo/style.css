@@ -1,6 +1,13 @@
 @charset "UTF-8";
 
+body {
+  width: 100vw;
+}
+
+
+
 #topo {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
 
@@ -14,6 +21,9 @@
     
 }
 
+#topo > img {
+  width: 100%;
+}
 
 
 section#imagens {
