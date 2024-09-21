@@ -3,12 +3,22 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  width: 98.vw;
+}
+
+main {
+  
+  overflow: hidden;
 }
 
 
 
 #topo {
-    width: 100%;
+    width: 98%;
     display: grid;
     grid-template-columns: 1fr 5fr;
 
