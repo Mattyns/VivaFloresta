@@ -51,7 +51,7 @@ section#imagens {
   
   .slider-image.active {
     opacity: 1; /* Imagem principal fica em evidência */
-    transform: scale(1.05); /* Um pequeno zoom na imagem principal, se desejado */
+    transform: scale(1.05); /*. Um pequeno zoom na imagem principal, se desejado */
     
   }
 
