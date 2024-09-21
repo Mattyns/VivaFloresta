@@ -42,5 +42,5 @@ slider.addEventListener('touchend', () => {
   showImage(currentIndex);
 });
 
-// Mostrar a primeira imagem ao carregar a página
+// Mostrar a primeira imagem ao carregar a página;.
 showImage(currentIndex);
