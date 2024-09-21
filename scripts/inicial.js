@@ -1,20 +1,14 @@
-nst images = document.querySelectorAll('.slider-image');
+const images = document.querySelectorAll('.slider-image');
 let currentIndex = 0;
 
-// Função para mostrar a imagem atual
+// Função para mostrar a imagem atual e centralizá-la
 function showImage(index) {
   const track = document.querySelector('.slider-track');
-  const totalImages = images.length;
-  const screenWidth = slider.clientWidth; // Pegando a largura do contêiner do slider
-
-  // Calcular a quantidade exata de deslocamento para centralizar as imagens
+  const screenWidth = window.innerWidth; // Pegar a largura da tela
+  
+  // Calcular o deslocamento com base na largura da tela
   const offset = -screenWidth * index;
   track.style.transform = `translateX(${offset}px)`;
-
-  // Adicionar/remover a classe "active" nas imagens
-  images.forEach((img, i) => {
-    img.classList.toggle('active', i === index);
-  });
 }
 
 // Variáveis para armazenar as coordenadas de toque
@@ -33,14 +27,21 @@ slider.addEventListener('touchmove', (e) => {
 });
 
 slider.addEventListener('touchend', () => {
-  // Determina se o usuário deslizou para a direita ou esquerda
+  // Determinar se o usuário deslizou para a direita ou esquerda
   if (startX > endX + 50) {
-    currentIndex = (currentIndex + 1) % images.length; // Próxima imagem
+    // Deslizou para a esquerda (próxima imagem)
+    currentIndex = (currentIndex + 1) % images.length;
   } else if (startX < endX - 50) {
-    currentIndex = (currentIndex - 1 + images.length) % images.length; // Imagem anterior
+    // Deslizou para a direita (imagem anterior)
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
   }
   showImage(currentIndex);
 });
 
-// Mostrar a primeira imagem ao carregar a página;.
+// Mostrar a primeira imagem ao carregar a página
 showImage(currentIndex);
+
+// Recalcular a centralização das imagens ao redimensionar a tela
+window.addEventListener('resize', () => {
+  showImage(currentIndex);
+});
