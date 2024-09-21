@@ -45,6 +45,6 @@ body {
 .slider-image {
   width: 100vw; /* As imagens ocupam toda a largura da tela */
   flex-shrink: 0; /* As imagens não podem encolher */
-  height: auto; /* Manter a proporção das imagens */
+  height: 100vh; /* Manter a proporção das imagens */
   object-fit: cover; /* As imagens preencherão o contêiner sem distorção */
 }
