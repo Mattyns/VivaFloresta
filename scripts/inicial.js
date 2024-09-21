@@ -5,8 +5,8 @@ let currentIndex = 0; // Iniciar na primeira imagem (índice 0)
 function showImage(index) {
   const track = document.querySelector('.slider-track');
   const screenWidth = window.innerWidth; // Pegar a largura da tela
-  const offset = -screenWidth * index; // Calcular a posição da imagem
-  track.style.transform = `translateX(${offset}px)`; // Mover as imagens
+  const offset = -screenWidth * index; // Calcular a posição da imagem com base no índice
+  track.style.transform = `translateX(${offset}px)`; // Mover o track de imagens
 }
 
 // Variáveis para armazenar as coordenadas de toque

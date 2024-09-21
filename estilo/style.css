@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-  width: 100vw;
+  
 }
 
 
@@ -39,7 +39,7 @@ body {
 }
 
 .slider-image {
-  width: 102vw; /* Cada imagem ocupa 100% da largura da tela */
+  width: 100vw; /* Cada imagem ocupa 100% da largura da tela */
   height: autovh; /* Altura ajustável de acordo com o tamanho da tela */
   object-fit: cover; /* Ajustar as imagens sem distorção */
   flex-shrink: 0; /* As imagens não podem encolher */
