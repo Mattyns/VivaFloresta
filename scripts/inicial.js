@@ -1,22 +1,19 @@
-const images = document.querySelectorAll('.slider-image');
+nst images = document.querySelectorAll('.slider-image');
 let currentIndex = 0;
 
 // Função para mostrar a imagem atual
 function showImage(index) {
   const track = document.querySelector('.slider-track');
   const totalImages = images.length;
+  const screenWidth = slider.clientWidth; // Pegando a largura do contêiner do slider
 
-  // Calcular a porcentagem para deslizar
-  const percentage = -(100 / totalImages) * index;
-  track.style.transform = `translateX(${percentage}%)`;
+  // Calcular a quantidade exata de deslocamento para centralizar as imagens
+  const offset = -screenWidth * index;
+  track.style.transform = `translateX(${offset}px)`;
 
-  // Adicionar a classe "active" à imagem atual e remover das outras
+  // Adicionar/remover a classe "active" nas imagens
   images.forEach((img, i) => {
-    if (i === index) {
-      img.classList.add('active');
-    } else {
-      img.classList.remove('active');
-    }
+    img.classList.toggle('active', i === index);
   });
 }
 
@@ -38,11 +35,9 @@ slider.addEventListener('touchmove', (e) => {
 slider.addEventListener('touchend', () => {
   // Determina se o usuário deslizou para a direita ou esquerda
   if (startX > endX + 50) {
-    // Deslizou para a esquerda (próxima imagem)
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex = (currentIndex + 1) % images.length; // Próxima imagem
   } else if (startX < endX - 50) {
-    // Deslizou para a direita (imagem anterior)
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Imagem anterior
   }
   showImage(currentIndex);
 });
