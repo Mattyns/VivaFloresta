@@ -10,6 +10,11 @@ html {
   width: 98.vw;
 }
 
+body {
+  height: auto;
+  background-color: rgb(79, 198, 111);
+}
+
 main {
   
   overflow: hidden;
@@ -17,24 +22,33 @@ main {
 
 
 
+
 #topo {
-    width: 98%;
+    z-index: 1;
+    background-color: rgba(252, 252, 252, 0.568);
+    position: sticky;
+    top: -1px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
+    
 
 
 }
 
 #topo i {
+  padding: 10px;
     font-size: 2em;
-    margin-top: 15px;
+    margin-top: 25px;
     color: black;
     
 }
 
 #topo > img {
-  width: 100%;
+  width: 90%;
+  padding: 10px;
 }
+
 
 
 .slider-container {
@@ -44,14 +58,27 @@ main {
 }
 
 .slider-track {
-  display: flex;
+  display: flex; /* Usar flexbox para empilhar as imagens horizontalmente */
   transition: transform 0.5s ease; /* Transição suave entre as imagens */
-  width: 300%;
+  width: calc(100vw * 3); /* Largura total para acomodar todas as imagens */
 }
 
 .slider-image {
-  width: 100vw; /* Cada imagem ocupa 100% da largura da tela */
-  height: autovh; /* Altura ajustável de acordo com o tamanho da tela */
-  object-fit: cover; /* Ajustar as imagens sem distorção */
-  flex-shrink: 0; /* As imagens não podem encolher */
+  width: 100vw; /* Cada imagem ocupa exatamente 100% da largura da tela */
+  display: flex;
+  flex-direction: column; /* Colocar a imagem em cima e o texto embaixo */
+  align-items: center; /* Centralizar o conteúdo */
+  text-align: center; /* Centralizar o texto */
+}
+
+.slider-image img {
+  width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+  height: auto; /* Manter a proporção da imagem */
+}
+
+.slider-image p {
+  padding: 10px; /* Espaçamento ao redor do texto */
+  margin: 0; /* Remover margem padrão */
+  font-size: 16px; /* Tamanho da fonte do texto */
+  color: #333; /* Cor do texto */
 }
