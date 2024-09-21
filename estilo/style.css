@@ -27,7 +27,7 @@ body {
 
 
 .slider-container {
-  width: 100%;
+  width: 100vw;
   max-width: 100vw; /* Limita ao tamanho da tela */
   overflow: hidden; /* Esconde o conteúdo que sai da tela */
   position: relative;
