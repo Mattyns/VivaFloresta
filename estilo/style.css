@@ -35,6 +35,7 @@ body {
 .slider-track {
   display: flex;
   transition: transform 0.5s ease; /* Transição suave entre as imagens */
+  width: 300%;
 }
 
 .slider-image {
