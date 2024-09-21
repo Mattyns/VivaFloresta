@@ -38,7 +38,7 @@ body {
 
 .slider-track {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Transição suave */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
   width: 300%; /* Garantir que as três imagens ocupem espaço suficiente */
 }
 
