@@ -1,5 +1,5 @@
 const images = document.querySelectorAll('.slider-image');
-let currentIndex = 0; // Iniciar na primeira imagem (índice 0)
+let currentIndex = 1; // Iniciar na primeira imagem (índice 0)
 
 // Ajustar a largura do slider-track com base no número de imagens
 const track = document.querySelector('.slider-track');
