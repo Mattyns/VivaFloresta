@@ -91,7 +91,7 @@ main {
 .slider-image p {
   padding: 10px; /* Espaçamento ao redor do texto */
   margin: 0; /* Remover margem padrão */
-  font-size: 0.8em; /* Tamanho da fonte do texto */
+  font-size: 0.6em; /* Tamanho da fonte do texto */
   color:black; /* Cor do texto */
   background-color: aliceblue;
   text-align: justify;
