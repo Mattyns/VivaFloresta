@@ -5,7 +5,19 @@
   font-family: 'ox';
   src: url('../Fontes/Oxford.ttf') format(truetype);
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'new';
+  src: url('../Fontes/Newtown.ttf');
   font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --cor0:rgb(25, 195, 70);
+  --cor1:rgb(11, 128, 42);
 }
 
 
@@ -22,7 +34,7 @@ html {
 
 body {
   height: auto;
-  background-color: rgb(79, 198, 111);
+  background-color: rgb(25, 195, 70);
 }
 
 main {
@@ -35,13 +47,13 @@ main {
 
 #topo {
     z-index: 1;
-    background-color: rgba(252, 252, 252, 0.568);
+    background-color: rgb(252, 252, 252);
     position: sticky;
     top: -1px;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    
+    grid-template-columns: 1fr 6fr;
+    border-bottom: 1px solid rgb(101, 96, 96);
 
 
 }
@@ -49,7 +61,7 @@ main {
 #topo i {
   padding: 10px;
     font-size: 2em;
-    margin-top: 25px;
+    margin-top: 15px;
     color: black;
     
 }
@@ -100,3 +112,73 @@ main {
   padding: 20px;
 
 }
+
+
+
+
+#noticias {
+  background-color: var(--cor1);
+  margin-top:20px;
+  margin-bottom: 50px; /*remover*/
+  padding-bottom: 20px;
+  border-radius: 15px;
+
+}
+
+#noticias a {
+  text-decoration: none;
+  color: black;
+}
+
+
+#noticias > h1 {
+  color: aliceblue;
+  text-align: center;
+  font-family:'new', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.8em;
+}
+
+#imgnoti {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#noti1 {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom:30px;
+  
+  background-color: aliceblue;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#noti1:hover {
+  width: 85%;
+  transition-duration: 0.5s;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.495);
+  border-radius: 20px 20px 50px 0px;
+}
+
+#noti1  h2 {
+  padding: 10px;
+  text-align: center;
+  font-family: 'new';
+  font-size: 1.5em;
+}
+
+#noti1 p {
+  font-family: 'ox' serif;
+  text-align: justify;
+  text-indent: 2em;
+  padding: 10px;
+}
+
+#noti1 i {
+  width: 100%;
+  margin-top: 20px;
+  text-align: right;
+  color: var(--cor1);
+  
+}
+
