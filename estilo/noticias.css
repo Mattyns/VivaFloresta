@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+
+
+
+
+#noticias {
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    background-color: aliceblue;
+
+} 
+
+#noticias > h1 {
+    color: black;
+    font-size: 2em;
+    
+}
+
+#noticias > h2 {
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+#noticias > p {
+    padding: 30px 15px;
+    text-indent: 2em;
+
+}
+
+#queimadas {
+    width: 100%;
+    top: 10px;
+}
+
+#guduru {
+    float: right;
+    font-size: 0.8em;
+    margin-right: 5px;
+    
+    
+}
+
+#solo {
+    width: 100%;
+    top: 10px;
+}
+
+#citesolo {
+    float: right;
+    font-size: 0.8em;
+    margin-right: 5px;
+    
+    
+}
+
+#florestaq {
+    width: 100%;
+    top: 10px;
+}
+
+#citeflorestaq {
+    float: right;
+    font-size: 0.8em;
+    margin-right: 5px;
+    
+    
+}
+
+#planta {
+    width: 100%;
+    top: 10px;
+}
+
+#citeplanta {
+    float: right;
+    font-size: 0.8em;
+    margin-right: 5px;
+    
+    
+}
