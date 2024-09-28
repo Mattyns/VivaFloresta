@@ -43,7 +43,7 @@
             </div>
 
             <div id="noti1">
-              <a href="#noti1">
+              <a href="noticias/Presevar.html">
                 <img src="img/pexels-triemli.jpg" alt="Queimada" id="imgnoti">
                 <h2>Os Benefícios de Plantar Árvores: Uma Solução Verde para o Planeta</h2>
                 <p>Plantar árvores é uma das práticas mais antigas e eficazes de preservação ambiental e restauração de ecossistemas. As árvores desempenham um papel vital na saúde do planeta, sendo fundamentais para a manutenção do equilíbrio ecológico...<i class="material-icons">play_circle</i></p>
@@ -54,10 +54,30 @@
             
 
           </section>
+
+          <section id="jogo1">
+            <h1>Vamos Reciclar!</h1>
+            <div id="lixo">
+              <p id="metal" onclick="metal()">Metal</p>
+              <p id="plast" onclick="plast()">Plástico</p>
+            </div>
+            <div id="lixeira">
+              <div id="rplast" onclick="rplast()"><i class="material-icons">recycling</i></div>
+              <div id="rmetal" onclick="rmetal()"><i class="material-icons">recycling</i></div>
+
+            </div>
+            <div onload="res()">
+              <p>Resultado:</p>
+              <p id="res"></p>
+
+            </div>
+
+          </section>
           
 
     </main>
 
     <script src="scripts/inicial.js"></script>
+    <script src="scripts/jogo1.js"></script>
 </body>
 </html>

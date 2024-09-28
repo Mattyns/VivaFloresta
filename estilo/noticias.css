@@ -21,12 +21,12 @@
 }
 
 #noticias > h2 {
-    padding: 20px;
+    padding: 5px 15px;
     font-size: 1.5em;
 }
 
 #noticias > p {
-    padding: 30px 15px;
+    padding: 20px 15px;
     text-indent: 2em;
 
 }
@@ -81,4 +81,18 @@
     margin-right: 5px;
     
     
+}
+
+
+/*presevar*/
+
+#notifoto {
+    width: 100%;
+    top: 10px;
+}
+
+#citenoti {
+    float: right;
+    font-size: 0.8em;
+    margin-right: 5px;
 }
