@@ -203,30 +203,105 @@ main {
   font-size: 2.8em;
 }
 
-#lixo {
+#jogo1 > p {
   padding: 20px;
+}
+
+#jogo1 > h2 {
+  margin: 20px 0px;
+  padding: 0px 20px;
+  background-color: var(--cor1);
+  font-family: 'new';
+}
+
+#lixo {
+  padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr;
+  margin:3px;
+  justify-items: center;
+  
+  
+}
+
+#lixo > p {
+  padding: 5px;
+  margin: 3px;
+  width: 80px;
+}
+
+#lixo > p:hover {
+  color: green;
+  transform: scale(1.1); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+
+/* Efeito de "bounce" (quicar) ao acertar */
+.bounce {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Sobe 10px */
+  }
 }
 
 #plast {
   background-color: rgb(157, 239, 239);
   width: fit-content;
-  padding: 5px;
+  
   border-radius: 10px;
 }
 
 #metal {
   background-color: rgb(89, 76, 72);
   width: fit-content;
-  padding: 5px;
+  
+  border-radius: 10px;
+}
+
+#vidro {
+  background-color: rgb(77, 236, 151);
+  width: fit-content;
+  
+  border-radius: 10px;
+}
+
+#org {
+  background-color: rgb(202, 77, 38);
+  width: fit-content;
+  
+  border-radius: 10px;
+}
+
+#naorec {
+  background-color: rgb(198, 67, 133);
+  width: fit-content;
+  
+  border-radius: 10px;
+}
+
+#papel {
+  background-color: rgb(219, 208, 205);
+  width: fit-content;
+  
   border-radius: 10px;
 }
 
 #lixeira {
-  padding: 20px;
+  padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+#lixeira > div {
+  
+  margin: 3px;
 }
 
 #rplast {
@@ -243,4 +318,49 @@ main {
   width: fit-content;
 }
 
+#rvidro {
+  padding: 20px;
+  border-radius:0px 0px 10px 10px;
+  background-color: rgb(16, 141, 20);
+  width: fit-content;
+}
 
+#rorg {
+  padding: 20px;
+  border-radius:0px 0px 10px 10px;
+  background-color: rgb(85, 34, 8);
+  width: fit-content;
+}
+
+#rnaorec {
+  padding: 20px;
+  border-radius:0px 0px 10px 10px;
+  background-color: rgb(112, 112, 109);
+  width: fit-content;
+}
+
+#rpapel {
+  padding: 20px;
+  border-radius:0px 0px 10px 10px;
+  background-color: rgb(26, 94, 168);
+  width: fit-content;
+}
+
+#re {
+  
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#re > p {
+  text-align:center ;
+  font-family: "new";
+  font-weight: bold;
+  background-color: var(--cor1);
+  width: 150px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  
+}

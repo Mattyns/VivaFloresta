@@ -1,58 +1,59 @@
-// Seleciona as divs
-const plast = document.getElementById('plast');
-const rplast = document.getElementById('rplast');
-const res = document.getElementById('res');
+let lixoSelecionado = null; // Variável para armazenar o lixo clicado
+    let acertos = 0; // Contador de acertos
+    const totalLixos = 6; // Total de lixos para reciclar
+    const reciclados = new Set(); // Armazena os IDs dos lixos já reciclados
 
-let clickedDiv1 = false;
+    // Função para atualizar o resultado
+    function atualizarResultado() {
+      document.getElementById("res").innerText = "Acertos: " + acertos + " de 6";
+    }
 
-// Adiciona um evento de clique à primeira div
-plast.addEventListener('click', function() {
-  clickedDiv1 = true; // Marca que a primeira div foi clicada
-});
+    // Função para verificar se o jogo foi completado
+    function verificarFimDeJogo() {
+      if (acertos === totalLixos) {
+        document.getElementById("mensagem-final").innerText = "Parabéns! Você reciclou todos os lixos corretamente!";
+      }
+    }
 
-// Adiciona um evento de clique à segunda div
-rplast.addEventListener('click', function() {
-  if (clickedDiv1) { // Verifica se a primeira div já foi clicada
-    res.textContent = 'Resultado X mostrado!';
-    clickedDiv1 = false; // Reseta para evitar exibição repetida
-  } else {
-    res.textContent = 'Resultado y mostrado!';
-    clickedDiv1 = false;
+    // Adiciona evento de clique para cada tipo de lixo
+    document.querySelectorAll("#lixo p").forEach(item => {
+      item.addEventListener("click", function() {
+        if (!reciclados.has(this.id)) { // Verifica se o lixo já foi reciclado
+          lixoSelecionado = this.id; // Armazena o id do lixo clicado
+          console.log("Lixo selecionado: " + lixoSelecionado);
+          item.classList.add("bounce"); // Aplica o efeito bounce ao clicar no lixo
+          setTimeout(() => item.classList.remove("bounce"), 500); // Remove a animação após 500ms
+        } else {
+          alert("Este lixo já foi reciclado!");
+        }
+      });
+    });
 
-    
+    // Adiciona evento de clique para cada lixeira
+    document.querySelectorAll("#lixeira div").forEach(item => {
+      item.addEventListener("click", function() {
+        if (lixoSelecionado && !reciclados.has(lixoSelecionado)) { // Certifica que o lixo ainda não foi reciclado
+          // Verifica se o lixo selecionado combina com a lixeira clicada
+          if ((lixoSelecionado === "metal" && this.id === "rmetal") ||
+              (lixoSelecionado === "plast" && this.id === "rplast") ||
+              (lixoSelecionado === "vidro" && this.id === "rvidro") ||
+              (lixoSelecionado === "org" && this.id === "rorg") ||
+              (lixoSelecionado === "naorec" && this.id === "rnaorec") ||
+              (lixoSelecionado === "papel" && this.id === "rpapel")) {
+            
+            acertos++; // Incrementa os acertos
+            reciclados.add(lixoSelecionado); // Marca o lixo como reciclado
+            this.classList.add("bounce"); // Aplica o efeito bounce na lixeira ao acertar
+            setTimeout(() => this.classList.remove("bounce"), 500); // Remove a animação após 500ms
+            atualizarResultado(); // Atualiza o número de acertos
+            verificarFimDeJogo(); // Verifica se o jogo terminou
+          } else {
+            alert("Você errou. Tente novamente!");
+          }
 
-  }
-});
-
-
-
-
-
-
-//2
-
-// Seleciona as divs
-const metal = document.getElementById('plast');
-const rmetal = document.getElementById('rplast');
-const res = document.getElementById('res');
-
-let clickedDiv2 = false;
-
-// Adiciona um evento de clique à primeira div
-metal.addEventListener('click', function() {
-  clickedDiv2 = true; // Marca que a primeira div foi clicada
-});
-
-// Adiciona um evento de clique à segunda div
-rmetal.addEventListener('click', function() {
-  if (clickedDiv2) { // Verifica se a primeira div já foi clicada
-    res.textContent = 'Resultado X mostrado!';
-    clickedDiv2 = false; // Reseta para evitar exibição repetida
-  } else {
-    res.textContent = 'Resultado y mostrado!';
-    clickedDiv2 = false;
-
-    
-
-  }
-});
+          lixoSelecionado = null; // Reseta a seleção de lixo
+        } else if (!lixoSelecionado) {
+          alert("Selecione um tipo de lixo primeiro!");
+        }
+      });
+    });

@@ -57,19 +57,30 @@
 
           <section id="jogo1">
             <h1>Vamos Reciclar!</h1>
+            <p>Clique primeiro no lixo e depois na cor da lixeira correspondente.</p>
+  
+            <h2>Lixo</h2>
             <div id="lixo">
-              <p id="metal" onclick="metal()">Metal</p>
-              <p id="plast" onclick="plast()">Plástico</p>
+              <p id="papel">Papel</p>
+              <p id="metal">Metal</p>
+              <p id="plast">Plástico</p>
+              <p id="vidro">Vidro</p>
+              <p id="org">Orgânico</p>
+              <p id="naorec">Não Reciclável</p>
             </div>
+          
+            <h2>Lixeira</h2>
             <div id="lixeira">
-              <div id="rplast" onclick="rplast()"><i class="material-icons">recycling</i></div>
-              <div id="rmetal" onclick="rmetal()"><i class="material-icons">recycling</i></div>
-
+              <div id="rorg"><i class="material-icons">recycling</i></div>
+              <div id="rmetal"><i class="material-icons">recycling</i></div>
+              <div id="rnaorec"><i class="material-icons">recycling</i></div>
+              <div id="rplast"><i class="material-icons">recycling</i></div>
+              <div id="rvidro"><i class="material-icons">recycling</i></div>
+              <div id="rpapel"><i class="material-icons">recycling</i></div>
             </div>
-            <div onload="res()">
-              <p>Resultado:</p>
-              <p id="res"></p>
-
+          
+            <div id="re">
+              <p id="res">Acertos: 0 de 6</p>
             </div>
 
           </section>
