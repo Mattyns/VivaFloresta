@@ -337,7 +337,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   color-scheme: light;
-  
+
 }
 
 #lixeira > div {
@@ -357,6 +357,7 @@ main {
   border-radius:0px 0px 10px 10px;
   background-color: rgb(195, 236, 12);
   width: fit-content;
+  color-scheme: light;
 }
 
 #rvidro {
@@ -378,6 +379,7 @@ main {
   border-radius:0px 0px 10px 10px;
   background-color: rgb(112, 112, 109);
   width: fit-content;
+  color-scheme: light;
 }
 
 #rpapel {
