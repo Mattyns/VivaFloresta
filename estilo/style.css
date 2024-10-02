@@ -337,6 +337,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   color-scheme: light;
+  
 }
 
 #lixeira > div {
