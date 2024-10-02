@@ -359,7 +359,7 @@ main {
 #rmetal {
   padding: 20px;
   border-radius:0px 0px 10px 10px;
-  background-color: rgb(195, 236, 12);
+  background-color: rgb(195, 236, 12) !important;
   width: fit-content;
   color-scheme: light;
 }
