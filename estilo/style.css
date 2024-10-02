@@ -182,6 +182,43 @@ main {
   
 }
 
+#reciclagem {
+  margin:20px 0px ;
+  background-color: aliceblue;
+  border-radius: 15px;
+  
+}
+
+#reciclagem > h1 {
+  font-family: 'new';
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+#reciclagem > p {
+  padding: 20px;
+  font-size: 1.2em;
+  text-indent: 2em;
+}
+
+#reciclagem > ul {
+  padding: 20px;
+  font-size: 1.2em;
+
+}
+
+#ftlixeiras {
+  width: 100%;
+  top: 10px;
+}
+
+#citelix {
+  float: right;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+
 
 
 /*jogo1*/
@@ -221,6 +258,7 @@ main {
   grid-template-rows: 2fr 2fr;
   margin:3px;
   justify-items: center;
+  color-scheme: light;
   
   
 }
@@ -297,6 +335,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  color-scheme: light;
 }
 
 #lixeira > div {
