@@ -209,6 +209,10 @@ main {
 
 }
 
+#reciclagem > ul > li {
+  color-scheme: light;
+}
+
 #ftlixeiras {
   width: 100%;
   top: 10px;
