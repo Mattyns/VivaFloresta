@@ -76,8 +76,8 @@ main {
   list-style: none;
   text-decoration: none;
   width: 200px;
-  height: 60px;
-  position: sticky;
+  height: auto;
+  position: fixed;
   top: 74px;
   z-index: 1;
   border-radius: 0px 0px 15px 0px;
@@ -439,5 +439,61 @@ main {
   margin: auto;
   padding: 10px;
   border-radius: 20px;
+  
+}
+
+#redessociais {
+  background-color: aliceblue;
+  margin-top:20px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+}
+
+#redessociais h1 {
+  text-align: center;
+  font-family:'new', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.5em;
+
+}
+
+#redessociais h2 {
+  text-align: center;
+  font-family:'new', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2em;
+
+}
+
+#redes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  padding: 10px;
+}
+
+#redes img {
+  width: 60%;
+  border-radius: 40%;
+}
+
+#port {
+  width: 100%;
+}
+
+#port a {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+}
+
+
+#redessociais i {
+  
+  background-color: var(--cor1);
+  font-size: 3em;
+  padding: 10px;
+  margin: 15px;
+  color: white;
+  border-radius: 40%;
   
 }
