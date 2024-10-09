@@ -226,7 +226,7 @@ li#fim {
 }
 
 #reciclagem {
-  margin:20px 0px ;
+  margin-top:20px;
   background-color: aliceblue;
   border-radius: 15px;
   
@@ -533,30 +533,53 @@ li#fim {
     
   }
 
+
+
   #menuham {
     display: none;
   }
 
   #menunormal {
     display: block;
+    
   }
 
 
 
   #menunormal ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     list-style: none;
     padding: 10px;
     justify-items: center;
     background-color: var(--cor1);
   }
 
+  
+
   #menunormal a {
     font-family: 'ox', 'Times New Roman', Times, serif;
     font-size: 1.3em;
     text-decoration: none;
     color: aliceblue;
+  }
+
+  #menunormal a:hover {
+    background-color: aliceblue;
+    color: var(--cor1);
+    padding: 13px;
+    transition-duration: 800ms;
+    border-radius: 10px 0px 10px 0px;
+  }
+
+  main > section {
+    width: 80%;
+    margin: auto;
+  }
+
+  #agruparnoti {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   
 }
